@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% set titulo="Cadastro" %}
+
+{% block conteudo %}
+
+<form action="/post_cadastro" method="post">
+    <div class="mb-3 form-floating">
+        <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome">
+        <label class="form-label" for="nome">Nome</label>
+    </div>
+    <div class="mb-3 form-floating">
+        <input class="form-control" type="text" name="descricao" id="descricao" placeholder="Descrição">
+        <label class="form-label" for="descricao">Descrição</label>
+    </div>
+    <div class="mb-3 form-floating">
+        <input class="form-control" type="number" name="estoque" id="estoque" placeholder="Estoque">
+        <label class="form-label" for="estoque">Estoque</label>
+    </div>
+    <div class="mb-3 form-floating">
+        <input class="form-control" type="number" name="preco" id="preco" placeholder="Preço">
+        <label class="form-label" for="preco">Preço</label>
+    </div>
+    <div class="mb-3 form-floating">
+        <select class="form-control" name="categoria" id="categoria">
+            <option value="1">Alimento</option>
+            <option value="2">Limpeza</option>
+            <option value="3">Eletrônicos</option>
+            <option value="4">Brinquedos</option>
+            <option value="5">Vestuário</option>
+            <option value="6">Automotivo</option>
+            <option value="7">Esporte&Lazer</option>
+        </select>
+        <label class="form-label" for="categoria">Categoria</label>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-dark btn-lg" type="submit">Cadastrar</button>
+    </div>
+</form>
+
+{% endblock %}
+
+
+
