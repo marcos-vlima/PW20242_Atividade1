@@ -24,8 +24,8 @@ def post_contato(
     nome: str = Form(...), 
     descricao: str = Form(...), 
     estoque: int = Form(...), 
-    preco: int = Form(...),
-    categoria: int = Form(...)):
+    preco: float = Form(...),
+    categoria: str = Form(...)):
     return RedirectResponse("/", 303)
 
 if __name__ == "__main__":
