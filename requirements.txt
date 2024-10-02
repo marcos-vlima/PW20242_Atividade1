@@ -1,0 +1,7 @@
+fastAPI
+uvicorn
+jinja2
+pyhton-multipart
+pillow
+bcrypt
+python-dotenv
