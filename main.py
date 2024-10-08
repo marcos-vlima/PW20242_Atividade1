@@ -5,6 +5,9 @@ from fastapi.templating import Jinja2Templates
 from fastapi import Request
 import uvicorn
 
+from repositories.produto_repo import obter_todos_produtos
+from util import verificar_banco
+
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
@@ -29,4 +32,5 @@ def post_contato(
     return RedirectResponse("/", 303)
 
 if __name__ == "__main__":
+    verificar_banco()
     uvicorn.run("main:app", port=8787, reload=True)

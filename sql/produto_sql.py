@@ -10,11 +10,15 @@ SQL_CRIAR_TABELA = """
 """
 
 SQL_INSERIR = """
-    INSERT INTO produti (nome, descricao, estoque, preco, categoria)
+    INSERT INTO produto (nome, descricao, estoque, preco, categoria)
     VALUES (?, ?, ?, ?, ?)
 """
 
 SQL_EXCLUIR = """
     DELETE FROM produto
     WHERE id = ?
+"""
+
+SQL_OBTER_TODOS = """
+    SELECT * FROM produto
 """
