@@ -13,14 +13,7 @@ def criar_tabela():
 
 def inserir_produto(produto: Produto) -> Optional[Produto]:
     cursor = obter_cursor()
-    cursor.execute(SQL_INSERIR, (
-        produto.nome, 
-        produto.descricao,
-        produto.estoque,
-        produto.preco,
-        produto.categoria
-        )
-    )
+    cursor.execute(SQL_INSERIR, (produto.nome, produto.descricao, produto.estoque, produto.preco, produto.categoria))
 
     if cursor.rowcount > 0:
         produto.id = cursor.lastrowid

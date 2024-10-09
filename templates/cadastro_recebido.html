@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% set titulo="Cadastro Recebido!" %}
+
+{% set cadastro="active" %}
+
+{% block conteudo %}
+
+<p class="lead">Cadastro recebido com sucesso!</p>
+
+<p><strong>Id Produto:</strong> {{ produto.id }}</p>
+<p><strong>Nome do Produto:</strong> {{ produto.nome }}</p>
+<p><strong>Descrição:</strong> {{ produto.descricao }}</p>
+<p><strong>Estoque:</strong> {{ produto.estoque }}</p>
+<p><strong>Preço:</strong> R$ {{ produto.preco | replace(".",",") }}</p>
+<p><strong>Categoria:</strong> {{ produto.categoria }}</p>
+
+<div class="mb-3">
+    <a class="btn btn-dark btn-lg" href="/cadastro">Cadastrar novamente</a>
+</div>
+
+{% endblock %}
